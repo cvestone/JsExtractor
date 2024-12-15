@@ -189,3 +189,4 @@ python3 extractor.py /path/to/js/files
 ## 示例
 ![image.png](https://rp01sword.oss-cn-guangzhou.aliyuncs.com/24/20241215183658.png)
 
+> 最后，欢迎师傅们提出宝贵建议、提PR，一起做快乐的脚本kiddie(bushi)
