@@ -184,3 +184,7 @@ save_results 函数会将提取的信息保存到指定的文件中。
 
 python3 extractor.py /path/to/js/files
 脚本启动后，会显示一个菜单，列出所有可用的类别。选择一个类别后，会进一步显示该类别下的所有项目。选择一个具体的项目或选择“全部”来提取该类别下的所有信息。最后，选择在终端输出提取的信息，或者将信息保存到文件。
+
+## 示例
+![image.png](https://rp01sword.oss-cn-guangzhou.aliyuncs.com/24/20241215183658.png)
+
