@@ -1,0 +1,118 @@
+{
+    "URL": {
+        "pattern": "([\\\"\\'])(https?://[^\\1]*?)\\1",
+        "category": "匹配http和https"
+    },
+    "Email": {
+        "pattern": "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",
+        "category": "匹配个人敏感信息"
+    },
+    "Phone": {
+        "pattern": "(?<!\\d)(13\\d{9}|14[579]\\d{8}|15[^4\\D]\\d{8}|166\\d{8}|17[^49\\D]\\d{8}|18\\d{9}|19[189]\\d{8})(?!\\d)",
+        "category": "匹配个人敏感信息"
+    },
+    "IDCard": {
+        "pattern": "(^[1-9]\\d{5}(18|19|20)\\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]$)|(^[1-9]\\d{5}\\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\\d{3}$)",
+        "category": "匹配个人敏感信息"
+    },
+    "BankCard": {
+        "pattern": "\\b([0-9]{16,19})\\b",
+        "category": "匹配个人敏感信息"
+    },
+    "IPv4": {
+        "pattern": "\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b",
+        "category": "匹配IP（包括ipv4和ipv6）"
+    },
+    "IPv6": {
+        "pattern": "\\b(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}\\b",
+        "category": "匹配IP（包括ipv4和ipv6）"
+    },
+    "AccessKey": {
+        "pattern": "(?i)(access_key|accesskey|access-key).*['\"]([0-9a-zA-Z]{8,40})['\"]",
+        "category": "小正则匹配凭据等相关信息"
+    },
+    "SecretKey": {
+        "pattern": "(?i)(secret_key|secretkey|secret-key).*['\"]([0-9a-zA-Z]{16,40})['\"]",
+        "category": "小正则匹配凭据等相关信息"
+    },
+    "APIKey": {
+        "pattern": "(?i)(api_key|apikey|api-key).*['\"]([0-9a-zA-Z]{16,40})['\"]",
+        "category": "小正则匹配凭据等相关信息"
+    },
+    "Password": {
+        "pattern": "(?i)(password|passwd).*['\"]([^'\"]{8,})['\"']",
+        "category": "小正则匹配凭据等相关信息"
+    },
+    "Token": {
+        "pattern": "(?i)(token|access_token|auth_token).*['\"]([0-9a-zA-Z._-]{8,})['\"']",
+        "category": "小正则匹配凭据等相关信息"
+    },
+    "PrivateKey": {
+        "pattern": "-----BEGIN (?:RSA )?PRIVATE KEY-----[\\s\\S]*?-----END (?:RSA )?PRIVATE KEY-----",
+        "category": "大正则匹配凭据等相关信息"
+    },
+    "PublicKey": {
+        "pattern": "-----BEGIN PUBLIC KEY-----[\\s\\S]*?-----END PUBLIC KEY-----",
+        "category": "大正则匹配凭据等相关信息"
+    },
+    "Certificate": {
+        "pattern": "-----BEGIN CERTIFICATE-----[\\s\\S]*?-----END CERTIFICATE-----",
+        "category": "大正则匹配凭据等相关信息"
+    },
+    "AWSAccessKeyID": {
+        "pattern": "(?<![A-Z0-9])[A-Z0-9]{20}(?![A-Z0-9])",
+        "category": "常见的云AK匹配"
+    },
+    "AWSSecretAccessKey": {
+        "pattern": "(?<![A-Za-z0-9/+=])[A-Za-z0-9/+=]{40}(?![A-Za-z0-9/+=])",
+        "category": "常见的云AK匹配"
+    },
+    "GoogleAPIKey": {
+        "pattern": "AIza[0-9A-Za-z-_]{35}",
+        "category": "常见的云AK匹配"
+    },
+    "GoogleOAuth": {
+        "pattern": "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com",
+        "category": "常见的云AK匹配"
+    },
+    "SlackToken": {
+        "pattern": "xox[baprs]-([0-9a-zA-Z]{10,48})?",
+        "category": "常见的key、token匹配"
+    },
+    "SlackWebhook": {
+        "pattern": "https://hooks.slack.com/services/T[a-zA-Z0-9_]{8}/B[a-zA-Z0-9_]{8}/[a-zA-Z0-9_]{24}",
+        "category": "匹配webhook"
+    },
+    "FacebookAccessToken": {
+        "pattern": "EAACEdEose0cBA[0-9A-Za-z]+",
+        "category": "常见的key、token匹配"
+    },
+    "TwitterAccessToken": {
+        "pattern": "[1-9][0-9]+-[0-9a-zA-Z]{40}",
+        "category": "常见的key、token匹配"
+    },
+    "LinkedInClientID": {
+        "pattern": "(?i)linkedin(.{0,20})?(?-i)['\"][0-9a-z]{12}['\"]",
+        "category": "常见的key、token匹配"
+    },
+    "LinkedInClientSecret": {
+        "pattern": "(?i)linkedin(.{0,20})?['\"][0-9a-z]{16}['\"]",
+        "category": "常见的key、token匹配"
+    },
+    "GitHubAccessToken": {
+        "pattern": "(?i)github(.{0,20})?(?-i)['\"][0-9a-zA-Z]{35,40}['\"]",
+        "category": "常见的key、token匹配"
+    },
+    "GitLabAccessToken": {
+        "pattern": "(?i)gitlab(.{0,20})?(?-i)['\"][0-9a-zA-Z]{20}['\"]",
+        "category": "常见的key、token匹配"
+    },
+    "Comment": {
+        "pattern": "(/\\*[\\s\\S]*?\\*/)|(//.*)",
+        "category": "提取多种注释"
+    },
+    "ChineseText": {
+        "pattern": "[\\u4e00-\\u9fff]+",
+        "category": "提取潜在有价值的中文信息"
+    }
+}
